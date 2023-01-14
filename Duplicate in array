@@ -1,0 +1,17 @@
+//  optimal solutin for given question 
+int findDuplicate(vector<int> &arr) 
+{
+    int ans=0;
+    // xoring all array element
+    for(int i=0;i<arr.size();i++)
+    {
+        ans=ans^arr[i];
+    }
+    // xor 1 to n-1
+    for(int i=0;i<arr.size();i++)
+    {
+        ans=ans^i;
+    }
+    return ans;
+	
+}
